@@ -1,29 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: hsl(30, 38%, 92%);
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.card1 {
-    background-color: red;
-    width: 300px;
-    height: 450px;
-    overflow: hidden;
+h1 {
+  font-weight: 700;
+  font-family: 'Fraunces', serif;
+  font-size: 32px;
+  line-height: 1;
 }
 
-.card2 {
-    background-color: blue;
-    width: 300px;
-    height: 450px;
+p {
+  line-height: 1.5;
+}
+
+.perfume {
+  margin-top: 35px;
+  letter-spacing: 3px;
+  font-size: 12px;
+  color: hsl(158, 36%, 37%);
+}
+
+.pricing {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.sale {
+  font-size: 32px;
+  font-weight: 700;
+  font-family: 'Fraunces', serif;
+  color: hsl(158, 36%, 37%);
+}
+
+.original {
+  margin-left: 20px;
+  text-decoration: line-through;
 }
 
 .card-container {
-    display: flex;
-    width: 600px;
+  display: flex;
+  max-width: 600px;
+  max-height: 450px;
 }
 
-img {
-    display: block;
+.card1 {
+  width: 100%;
+  height: 450px;
+  background-image: url('/assets/images/image-product-desktop.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px 0 0 10px;
+}
+
+.card2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: hsl(0, 0%, 100%);
+  width: 100%;
+  padding: 0 40px 40px 40px;
+  border-radius: 0 10px 10px 0;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(158, 36%, 37%);
+  color: hsl(0, 0%, 100%);
+  padding: 15px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: hsl(158, 36%, 47%);
+}
+
+.icon {
+  height: 15px;
+  width: 15px;
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  .card-container {
+    flex-direction: column;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .card1 {
     width: 100%;
+    background-image: url('/assets/images/image-product-mobile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .card2 {
+    padding: 0 20px 20px 20px;
+    border-radius: 0 0 10px 10px;
+  }
 }
